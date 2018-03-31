@@ -9,6 +9,7 @@ process.stdin.on('readable', function() {
     switch(instruction) {
       case '/exit':
         process.stdout.write('Quitting app!\n');
+        process.exit();
         break;
       case '/versionNode':
         console.log('Node.js version is ' + process.versions.node + '\n');
